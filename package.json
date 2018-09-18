@@ -1,0 +1,44 @@
+{
+  "name": "line-beacon-simple-notifier",
+  "description": "LINE Beacon Simple Notifier",
+  "version": "1.0.0",
+  "author": "Ryoichi Obara <npmjs0102@gmail.com> (http://ryoichi0102.hatenablog.com/)",
+  "bugs": {
+    "url": "https://github.com/ryoichi-obara/line-beacon-simple-notifier/issues"
+  },
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.316.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "dotenv": "^6.0.0",
+    "eslint": "^5.6.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-install": "^1.1.0",
+    "gulp-zip": "^4.2.0"
+  },
+  "homepage": "https://github.com/ryoichi-obara/line-beacon-simple-notifier#readme",
+  "keywords": [
+    "Beacon",
+    "LINE"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryoichi-obara/line-beacon-simple-notifier.git"
+  },
+  "scripts": {
+    "build": "npm i && gulp clean && babel src -d build/Release && gulp install-dependancies",
+    "make": "npm run build && gulp build-zip",
+    "quick": "babel src -d build/Release && gulp build-zip",
+    "test": "node handle.js"
+  }
+}
